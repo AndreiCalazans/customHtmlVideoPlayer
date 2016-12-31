@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>Video</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
-  <div class="player">
-    <video width="640" height="360" >
+    <div class="player">
+    <video class="viewer" width="640" height="360" >
       <source src="test.webm" type="video/webm">
    </video>
 
@@ -15,11 +16,12 @@
       <div class="progressBar">
         <div class="progressBarFilled"></div>
       </div>
-      <button class="playerBtn">►</button>
-      <input class="playerSlider" type="range">
-      <input class="playerSlider" type="range">
-      <button class="playerBtn"><< 10s </button>
-      <button class="playerBtn">25s >></button>
+      <button class="playerBtn toggle" title="Toggle Play"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <input class = 'slider' type="range" name="volume"  min=0 max="1" step="0.05" value="1">
+      <input class = 'slider' type="range" name="playbackRate" min="0.5" max="2" step="0.1" value="1">
+      <button data-skip="-10" class="playerBtn">« 10s</button>
+      <button data-skip="25" class="playerBtn">25s »</button>
+      <button class="playerBtn fullScreen"><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
 
    </div>
  </div>
